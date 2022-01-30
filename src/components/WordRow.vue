@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
+// @ts-ignore
 import { GetTodaysWordle } from '../helper'
 import LetterBox from './LetterBox.vue'
 const solution = ref(GetTodaysWordle())
