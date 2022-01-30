@@ -1,22 +1,39 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, watch } from 'vue'
 import { GetTodaysWordle } from '../helper'
 import LetterBox from './LetterBox.vue'
 const solution = ref(GetTodaysWordle())
 const answer = ref(["", "", "", "", ""])
 
+const props = defineProps({
+    showWordle:{
+        type: Boolean,
+        default: false
+    }
+})
+
 const counter = ref(0)
 
-onMounted (() => {showAnswer()})
+watch(
+  () => props.showWordle,
+  (newVal, prevVal) => {
+    if (newVal) showAnswer()
+  }
+)
 
 async function showAnswer() {
   for (let loop = 0; loop < 5; loop++)
   { 
       answer.value[loop] = solution.value[loop]
-      await new Promise(resolve => setTimeout(resolve, 500));
+      await new Promise(resolve => setTimeout(resolve, 200));
+  }
+
+  for (let loop = 0; loop < 5; loop++)
+  { 
       counter.value++
       await new Promise(resolve => setTimeout(resolve, 200));
   }
+  
 }
 
 

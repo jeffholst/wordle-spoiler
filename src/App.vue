@@ -1,16 +1,40 @@
 <script setup lang="ts">
-import { ref  } from 'vue'
-import WordRow from './components/WordRow.vue'
+import { ref } from "vue";
+import WordRow from "./components/WordRow.vue";
 
-const showHint = ref(false)
+const showWordle = ref(false)
+var options: any = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
+const today = ref(new Date().toLocaleDateString("en-US", options))
+const wordRow = ref()
+
 </script>
 
 <template>
-  <div class="pt-10 text-center underline text-sky-500">
-    <a href="https://www.powerlanguage.co.uk/wordle/">Click here to Play Wordle</a>
+  <div class="pt-10 text-center">
+    {{ today }}
   </div>
-  
-  <WordRow v-if="showHint" class="pt-10"/>
+  <div class="pt-10 text-center underline text-sky-500">
+    <a href="https://www.powerlanguage.co.uk/wordle/"
+      >Click to play Wordle</a
+    >
+  </div>
+  <div class="text-center pt-10">
+    <button
+      @click="showWordle = true"
+      class="
+        bg-blue-500
+        hover:bg-blue-700
+        text-white
+        font-bold
+        py-2
+        px-4
+        rounded
+      "
+    >
+      Click to spoil Wordle
+    </button>
+  </div>
+  <WordRow class="pt-5" :showWordle="showWordle"/>
 </template>
 
 <style>
