@@ -13,12 +13,7 @@ const wordRow = ref()
   <div class="pt-10 text-center">
     {{ today }}
   </div>
-  <div class="pt-10 text-center underline text-sky-500">
-    <a href="https://www.powerlanguage.co.uk/wordle/"
-      >Click to play Wordle</a
-    >
-  </div>
-  <div class="text-center pt-10">
+  <div class="text-center pt-5">
     <button
       @click="showWordle = true"
       class="
@@ -31,10 +26,15 @@ const wordRow = ref()
         rounded
       "
     >
-      Click to spoil Wordle
+      Spoil Wordle
     </button>
   </div>
   <WordRow class="pt-5" :showWordle="showWordle"/>
+  <div class="pt-10 text-center underline text-sky-500">
+    <a href="https://www.powerlanguage.co.uk/wordle/"
+      >Play Wordle</a
+    >
+  </div>
 </template>
 
 <style>

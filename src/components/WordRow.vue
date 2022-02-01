@@ -32,7 +32,7 @@ async function showAnswer() {
   for (let loop = 0; loop < 5; loop++)
   { 
       counter.value++
-      await new Promise(resolve => setTimeout(resolve, 200));
+      await new Promise(resolve => setTimeout(resolve, 125));
   }
   
 }
