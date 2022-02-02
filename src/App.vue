@@ -10,10 +10,7 @@ const wordRow = ref()
 </script>
 
 <template>
-  <div class="pt-10 text-center">
-    {{ today }}
-  </div>
-  <div class="text-center pt-5">
+  <div class="text-center pt-5" style="padding-top: 50px">
     <button
       @click="showWordle = true"
       class="
@@ -30,6 +27,9 @@ const wordRow = ref()
     </button>
   </div>
   <WordRow class="pt-5" :showWordle="showWordle"/>
+  <div class="pt-2 text-center">
+    {{ today }} Wordle of the day
+  </div>
   <div class="pt-10 text-center underline text-sky-500">
     <a href="https://www.powerlanguage.co.uk/wordle/"
       >Play Wordle</a
