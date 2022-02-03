@@ -57,15 +57,15 @@ const style = computed(() => props.showCorrect ? 'transform: rotateY(180deg)' : 
 }
 
 .bounce {
-  animation: bounce 1s ease 1;
+  animation: bounce 2.5s ease 1;
 }
 @keyframes bounce {
-    70% { transform:translateY(0%); }
-    80% { transform:translateY(-15%); }
-    90% { transform:translateY(0%); }
-    95% { transform:translateY(-7%); }
-    97% { transform:translateY(0%); }
-    99% { transform:translateY(-3%); }
+    40% { transform:translateY(0%); }
+    50% { transform:translateY(-15%); }
+    60% { transform:translateY(0%); }
+    70% { transform:translateY(-7%); }
+    80% { transform:translateY(0%); }
+    90% { transform:translateY(-3%); }
     100% { transform:translateY(0); }
 }
 
