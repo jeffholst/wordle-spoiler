@@ -16,8 +16,8 @@ const style = computed(() => props.showCorrect ? 'transform: rotateY(180deg)' : 
 </script>
 
 <template>
-  <div class="flip-card" >
-    <div class="flip-card-inner" :style="style">
+  <div class="flip-card" :class="{bounce: props.showCorrect}">
+    <div class="flip-card-inner" :class="{'flipcardtransform' : props.showCorrect}">
       <div class="flip-card-front">
         <div class="letterbox">
           {{ letter }}
@@ -56,7 +56,18 @@ const style = computed(() => props.showCorrect ? 'transform: rotateY(180deg)' : 
     transform: rotateY(180deg)
 }
 
-
+.bounce {
+  animation: bounce 1s ease 1;
+}
+@keyframes bounce {
+    70% { transform:translateY(0%); }
+    80% { transform:translateY(-15%); }
+    90% { transform:translateY(0%); }
+    95% { transform:translateY(-7%); }
+    97% { transform:translateY(0%); }
+    99% { transform:translateY(-3%); }
+    100% { transform:translateY(0); }
+}
 
 .flip-card-front,
 .flip-card-back {
