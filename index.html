@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spoil Wordle</title>
-    <meta property="og:url"           content="https:/wordle.jeffholst.net" />
-    <meta property="og:type"          content="website" />
-    <meta property="og:title"         content="Spoil Wordle" />
-    <meta property="og:description"   content="Spoil your daily Wordle" />
-  </head>
-  <body class="bg-white dark:text-slate-400" style="background-color: #121213;">
-    <div id="app" ></div>
-    <script type="module" src="/src/main.ts"></script><div id="fb-root"></div>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spoil Wordle</title>
+  <meta property="og:url" content="https:/wordle.jeffholst.net" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Spoil Wordle" />
+  <meta property="og:description" content="Spoil your daily Wordle" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YG48CVZRQ2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-YG48CVZRQ2');
+  </script>
+</head>
+
+<body class="bg-white dark:text-slate-400" style="background-color: #121213;">
+  <div id="app"></div>
+  <script type="module" src="/src/main.ts"></script>
+  <div id="fb-root"></div>
+</body>
+
 </html>
