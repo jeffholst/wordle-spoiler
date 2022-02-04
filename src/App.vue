@@ -59,9 +59,13 @@ function openWindow(destURL: string) {
   <div class="pt-2 text-center">{{ today }} Wordle of the day</div>
 
   <div class="pt-5 text-center">
+    <div>
+      Share on Social Media
+    </div>
     <button
       @click="twitter"
       class="
+        mt-3
         bg-blue-300
         hover:bg-blue-700
         px-4
@@ -91,6 +95,7 @@ function openWindow(destURL: string) {
       @click="facebook"
       class="
         ml-5
+        mt-3
         bg-blue-500
         hover:bg-blue-800
         px-4
@@ -120,6 +125,7 @@ function openWindow(destURL: string) {
       @click="reddit"
       class="
         ml-5
+        mt-3
         bg-red-500
         hover:bg-red-700
         px-4
@@ -145,6 +151,9 @@ function openWindow(destURL: string) {
       <span>Reddit</span>
     </button>
 
+    <div class="pt-5">
+      Created with 💖 by <a href="https://twitter.com/intent/tweet?screen_name=jeffholst" target="blank" title="@jeffholst">@JeffHolst</a>
+    </div>
     <div class="pt-10 text-center underline text-sky-500">
       <a href="https://www.powerlanguage.co.uk/wordle/">Play Wordle</a>
     </div>
