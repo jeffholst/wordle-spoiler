@@ -62,6 +62,9 @@ function openWindow(destURL: string) {
     <div>
       Share on Social Media
     </div>
+    <div>
+      P.S. Please do not post Wordle Spoilers
+    </div>
     <button
       @click="twitter"
       class="
