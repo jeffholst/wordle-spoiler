@@ -52,7 +52,7 @@ function openWindow(destURL: string) {
         rounded
       "
     >
-      Spoil Wordle
+      Spoil Today's Wordle
     </button>
   </div>
   <WordRow class="pt-5" :showWordle="showWordle" />
