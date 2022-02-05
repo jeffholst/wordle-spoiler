@@ -78,7 +78,7 @@ function openWindow(destURL: string) {
       Spoil 6 Letter Wordle
     </button>
   </div>
-  <WordRow class="pt-5" :showWordle="showWordle" :wordle-length="parseInt(wordleLength)"/>
+  <WordRow class="pt-5" :showWordle="showWordle" :wordle-length="wordleLength"/>
   <div class="pt-2 text-center">{{ today }} Wordle of the day</div>
 
   <div class="pt-5 text-center">
