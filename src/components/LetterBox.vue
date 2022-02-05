@@ -35,8 +35,8 @@ const style = computed(() => props.showCorrect ? 'transform: rotateY(180deg)' : 
 <style scoped>
 .flip-card {
   background-color: transparent;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   perspective: 1000px;
 }
 
@@ -46,7 +46,7 @@ const style = computed(() => props.showCorrect ? 'transform: rotateY(180deg)' : 
   height: 100%;
   font-weight: bold;
   text-align: center;
-  font-size: 40px;
+  font-size: 35px;
   transition: transform 0.6s;
   transform-style: preserve-3d;
   text-transform: capitalize;
@@ -82,7 +82,7 @@ const style = computed(() => props.showCorrect ? 'transform: rotateY(180deg)' : 
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 0px;
+  top: -4px;
 }
 
 .flip-card-front {

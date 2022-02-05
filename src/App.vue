@@ -12,6 +12,8 @@ var options: any = {
 const today = ref(new Date().toLocaleDateString("en-US", options));
 const wordRow = ref();
 
+const wordleLength = ref(6)
+
 onMounted(() => {});
 
 function facebook() {
@@ -55,7 +57,7 @@ function openWindow(destURL: string) {
       Spoil Today's Wordle
     </button>
   </div>
-  <WordRow class="pt-5" :showWordle="showWordle" />
+  <WordRow class="pt-5" :showWordle="showWordle" :wordle-length="parseInt(wordleLength)"/>
   <div class="pt-2 text-center">{{ today }} Wordle of the day</div>
 
   <div class="pt-5 text-center">
