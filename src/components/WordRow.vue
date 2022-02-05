@@ -29,7 +29,17 @@ watch(
   }
 )
 
+watch(
+  () => props.wordleLength,
+  (newVal, prevVal) => {
+    answer.value = props.wordleLength === 5 ? ["", "", "", "", ""] : ["", "", "", "", "", ""]
+    solution.value = props.wordleLength === 5 ? GetTodaysWordle5() : GetTodaysWordle6()
+    showAnswer()
+  }
+)
+
 async function showAnswer() {
+  counter.value = 0
   for (let loop = 0; loop < props.wordleLength; loop++)
   { 
       answer.value[loop] = solution.value[loop]
@@ -41,9 +51,7 @@ async function showAnswer() {
       counter.value++
       await new Promise(resolve => setTimeout(resolve, 125));
   }
-  
 }
-
 
 </script>
 

@@ -16,6 +16,11 @@ const wordleLength = ref(6)
 
 onMounted(() => {});
 
+function showWordleSoltution(wordleCount: number) {
+  wordleLength.value = wordleCount;
+  showWordle.value = true;
+}
+
 function facebook() {
   let destURL = "https://www.facebook.com/sharer/sharer.php?u=";
   openWindow(destURL);
@@ -43,7 +48,7 @@ function openWindow(destURL: string) {
 <template>
   <div class="text-center pt-5" style="padding-top: 50px">
     <button
-      @click="showWordle = true"
+      @click="showWordleSoltution(5)"
       class="
         bg-blue-500
         hover:bg-blue-700
@@ -54,7 +59,23 @@ function openWindow(destURL: string) {
         rounded
       "
     >
-      Spoil Today's Wordle
+      Spoil 5 Letter Wordle
+    </button>
+
+    <button
+      @click="showWordleSoltution(6)"
+      class="
+        ml-4
+        bg-blue-500
+        hover:bg-blue-700
+        text-white
+        font-bold
+        py-2
+        px-4
+        rounded
+      "
+    >
+      Spoil 6 Letter Wordle
     </button>
   </div>
   <WordRow class="pt-5" :showWordle="showWordle" :wordle-length="parseInt(wordleLength)"/>
@@ -161,6 +182,7 @@ function openWindow(destURL: string) {
     </div>
     <div class="pt-10 text-center underline text-sky-500">
       <a href="https://www.powerlanguage.co.uk/wordle/">Play Wordle</a>
+      <a class="ml-2" href="https://www.wordle2.in/">Play Wordle2</a>
     </div>
   </div>
 </template>
